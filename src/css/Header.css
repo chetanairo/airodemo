@@ -1,0 +1,16 @@
+.header {
+    display: grid;
+    grid-template-areas: "logo";
+    grid-template-columns: repeat(2, auto);
+    /* border: 1px solid gray; */
+    box-shadow: 0 8px 6px -6px lightgrey;
+}
+
+.header img {    
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    padding:20px;
+    align-items: center;
+    justify-items: center;
+    height:50px;
+}

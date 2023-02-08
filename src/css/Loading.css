@@ -1,0 +1,11 @@
+.loader[data-loader=true] {
+    display:flex;
+    justify-content: center;    
+    margin:20px;
+}
+
+.loader[data-loader=false] {
+    display:flex;
+    justify-content: center;    
+    margin:0px;
+}

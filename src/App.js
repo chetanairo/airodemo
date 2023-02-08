@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import Loading from './components/Loading';
+import Header from './components/Header';
+import DisplayData from './components/DisplayData';
 
 function App() {
+  const [keyword, setKeyword] = useState('');
+  const [loading, isLoading] = useState(false);
+  const [data, setData] = useState();
+  const onChange = (val) => setKeyword(val);
+
+  const fetchData = async (keyword) => {
+    try {
+      setData();
+      isLoading(true);
+      const data = await (await fetch(`https://arnavsimer.pythonanywhere.com/search/${keyword}`)).json()
+      setData(data);
+      isLoading(false);
+    } catch (error) {
+        console.log(error);
+    }    
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header {...{ keyword, onChange, fetchData }}></Header>      
+      <Loading {...{ loading }} />
+      <DisplayData {...{data}} />
     </div>
   );
 }
