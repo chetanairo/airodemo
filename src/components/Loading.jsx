@@ -7,7 +7,7 @@ const Loading = ({loading}) => {
         <div className="loader" data-loader={loading}>
             {
                 loading && (
-                    <span>Loading Data..</span>
+                    <span>Processing results</span>
                 )
             }
         </div>

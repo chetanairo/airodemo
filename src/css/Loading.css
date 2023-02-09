@@ -2,6 +2,10 @@
     display:flex;
     justify-content: center;    
     margin:20px;
+    top:50%;
+    left:35%;
+    position: absolute;
+    font-size: 30px;
 }
 
 .loader[data-loader=false] {
@@ -9,3 +13,27 @@
     justify-content: center;    
     margin:0px;
 }
+
+.loader span:after {  
+  content: ' .';
+  animation: results 1s steps(5, end) infinite;}
+
+@keyframes results {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: white;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 white,
+      .5em 0 0 white;}}

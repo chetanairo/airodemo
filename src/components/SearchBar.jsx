@@ -12,14 +12,11 @@ const SearchBar = ({keyword, onChange, fetchData}) => {
             <input                 
                 key="search-bar"
                 value={keyword}
-                placeholder={"Search sources"}
+                placeholder={"Start you search here....."}
                 onChange={(e) => onChange(e.target.value)}
+                type='search'
             />
-            <button
-               
-            >
-                Search
-            </button>
+            <button>Search</button>
         </form>
     </div>        
   );
