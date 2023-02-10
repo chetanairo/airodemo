@@ -9,9 +9,9 @@ const DisplayData = ({data}) => {
                 <thead>
                     <tr>
                         <th>SR. NO</th>
-                        <th>RESULTS</th>
-                        <th>STUDENT SAFE</th>
-                        <th>COMMERCIAL</th>
+                        <th>WEB RESULTS</th>
+                        <th>STUDENT APPROPRIATE</th>
+                        <th>COMMERCIAL CONTENT</th>
                     </tr>
                 </thead>
                 <tbody>
