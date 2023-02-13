@@ -13,7 +13,7 @@ function App() {
     try {
       setData();
       isLoading(true);
-      const data = await (await fetch(`https://arnavsimer.pythonanywhere.com/search/${keyword}`)).json()
+      const data = await (await fetch(`https://wizenozepoc.pythonanywhere.com/search/${keyword}`)).json()
       setData(data);
       isLoading(false);
     } catch (error) {
